@@ -9,6 +9,7 @@ import './App.css';
 const App = () => {
     return (
         <BrowserRouter>
+    
             <HomePage1 />
         </BrowserRouter>
     );
