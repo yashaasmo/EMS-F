@@ -1,0 +1,82 @@
+/* ✅ इस स्टाइल को रहने दें */
+.social-icon-circle {
+  background-color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0185C6;
+  font-size: 14px;
+}
+/* src/App.css */
+
+/* इस स्टाइल को App.css में जोड़ें */
+
+/* यह क्लास मुख्य कंटेंट को साइडबार के लिए जगह बनाने के लिए है */
+.main-content-with-fixed-sidebar {
+  margin-left: 250px; /* साइडबार की चौड़ाई */
+  padding: 20px;
+  background-color: #f0f2f5;
+  min-height: calc(100vh - 124px); /* हेडर की ऊंचाई घटाकर बची हुई ऊंचाई */
+}
+
+/* मोबाइल और टैबलेट पर जब साइडबार छिप जाए, तो मार्जिन हटा दें */
+@media (max-width: 991.98px) {
+  .main-content-with-fixed-sidebar {
+    margin-left: 0;
+  }
+}
+/* src/App.css */
+
+/* पूरे पेज के लिए एक कंटेनर */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* पूरी स्क्रीन की ऊंचाई */
+}
+
+/* फिक्स्ड हेडर एरिया */
+.page-header {
+  flex-shrink: 0; /* इसे सिकुड़ने से रोकता है */
+}
+
+/* मुख्य कंटेंट एरिया (साइडबार और कंटेंट) */
+.main-content-area {
+  display: flex;
+  flex-grow: 1; /* बची हुई जगह ले लेता है */
+  overflow: hidden; /* अतिरिक्त कंटेंट को छिपाता है */
+}
+
+/* बायाँ और दाहिना साइडबार */
+.left-sidebar, .right-sidebar {
+  flex-shrink: 0; /* इन्हें सिकुड़ने से रोकता है */
+  overflow-y: auto; /* अगर कंटेंट ज्यादा हो तो स्क्रॉलबार दिखाता है */
+  height: 100%;
+}
+
+.left-sidebar {
+  width: 250px;
+  border-right: 1px solid #e9ecef;
+}
+
+.right-sidebar {
+  width: 380px;
+  padding: 1.5rem; /* 24px padding */
+  border-left: 1px solid #e9ecef;
+}
+
+/* बीच का कंटेंट जो स्क्रॉल होगा */
+.center-content {
+  flex-grow: 1; /* बची हुई सारी जगह ले लेता है */
+  overflow-y: auto; /* केवल यह एरिया स्क्रॉल होगा */
+  padding: 1.5rem; /* 24px padding */
+}
+
+/* छोटे स्क्रीन पर साइडबार छिपाने के लिए */
+@media (max-width: 992px) {
+  .left-sidebar, .right-sidebar {
+    display: none;
+  }
+}
