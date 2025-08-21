@@ -24,6 +24,7 @@ import EpaperPage from "../../components/MainArtical/EpaperPage"; // "EpaperView
 
 import ReelViewer from "../../components/ReelsViewer/ReelViewer";
 import NewsDetailPage from "../../components/Main_NewsDetails/NewsDetailPage";
+import DirectoryPage from "../../Directory/DirectoryPage";
 const HEADER_HEIGHT = "155px";
 
 const HomePage1 = () => {
@@ -78,6 +79,7 @@ const HomePage1 = () => {
           <Route path="/placement-consultants" element={<PlacementPage />} />
           <Route path="/epaper" element={<EpaperGallery />} />
           <Route path="/epaper/viewer/:editionId" element={<EpaperViewer />} />
+           <Route path="/directory" element={<DirectoryPage />} />
           {/* --- ✅ यहाँ भी कंपोनेंट का नाम बदलें --- */}
           <Route path="/epaper" element={<EpaperPage />} />{" "}
           {/* "EpaperViewer" की जगह "EpaperPage" */}
@@ -90,6 +92,8 @@ const HomePage1 = () => {
             <Route path="/india" element={<IndiaPage />} />
             <Route path="/astrology" element={<RashifalDetailsPage />} />
             <Route path="/news/:newsId" element={<NewsDetailPage/>} />
+
+               
           </Route>
           {/* सिर्फ लेफ्ट साइडबार वाला लेआउट */}
           <Route
